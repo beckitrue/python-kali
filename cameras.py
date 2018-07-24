@@ -8,6 +8,7 @@
 # Input
 # takes output from Wireshark file saved as plain text and parses it
 # for IP to MAC mapping
+# file was Export Packet Dissections as Plain Text
 
 # Output 
 # CSV: MAC, IP
