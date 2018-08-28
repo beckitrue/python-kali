@@ -7,7 +7,7 @@ def guessing ():
     # generate a random number
     n = random.randint(1,99)
     # add a guess counter
-    count = 0
+    count = 1
     # the guessing loop logic
     guess = int(input("Guess a number between 1 and 99: "))
     while n != guess:
