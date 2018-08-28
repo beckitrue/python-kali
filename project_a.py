@@ -6,15 +6,18 @@ def guessing ():
 # Guess a randomly generated number between 1 and 99
     # generate a random number
     n = random.randint(1,99)
+    # add a guess counter
+    count = 0
     # the guessing loop logic
     guess = int(input("Guess a number between 1 and 99: "))
     while n != guess:
+        count += 1
         if guess > n:
             print ("High. Try again: ")
         else:
             print ("Low. Try again: ")
         guess = int(input("Guess a number between 1 and 99: "))    
-    print ("Correct!!")
+    print ("Correct!! It took you {:d} guesses".format(count))
     # see if they want to play again
     again = input("Would you like to play again? ")
     if (again == 'yes') or (again == 'y'):
