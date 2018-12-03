@@ -28,10 +28,10 @@ def create_socket():
     # print a message when we get a connection on the socket we created
     while True:
         conn, addr = s.accept()
-        incomming_ip, port = addr
-        print('received connection from: {}'.format(incomming_ip))
+        incoming_ip, port = addr
+        print('received connection from: {}'.format(incoming_ip))
 
-        geolocation(incomming_ip)
+        geolocation(incoming_ip)
 
 
 def geolocation(ip):
@@ -39,6 +39,7 @@ def geolocation(ip):
     # get fancy with geolocation
     import json
 
+    # open config.json file that has API URL and API Key
     with open('config.json', 'r') as f:
         config = json.load(f)
 
