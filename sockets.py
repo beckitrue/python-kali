@@ -18,7 +18,6 @@ def create_socket():
 
     # put the socket in listening mode
     s.listen(5)
-    print("socket is now listening")
 
     # find and print our public IP address
     ip = get('https://api.ipify.org').text
