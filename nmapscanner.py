@@ -3,6 +3,7 @@ from optparse import OptionParser
 import nmap
 
 
+# pass target host and target port to nmap
 def nmapScan(tgtHost, tgtPort):
     nScan = nmap.PortScanner()
     nScan.scan(tgtHost, tgtPort)
@@ -16,7 +17,7 @@ def main():
     parser.add_option('-H', dest='tgtHost', type='string',
                       help='specify target host IP or FQDN')
     parser.add_option('-p', dest='tgtPort', type='string',
-                      help='specify target port')
+                      help='specify target port[s] comma separated: 22,80')
     (options, args) = parser.parse_args()
     if (options.tgtHost is None) or (options.tgtPort is None):
         parser.error("Wrong number of arguments")
