@@ -12,7 +12,7 @@ def nmapScan(tgtHost, tgtPort):
 
 
 def main():
-    usage = "usage: %prog -H <target host> -p <target port>"
+    usage = "usage: %prog -H <target host> -p <target port>[,<target port>]"
     parser = OptionParser(usage)
     parser.add_option('-H', dest='tgtHost', type='string',
                       help='specify target host IP or FQDN')
